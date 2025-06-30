@@ -21,7 +21,7 @@ class EmbeddingModel:
         self.embeddings_model_name = embeddings_model_name
 
     async def async_get_embeddings(self, list_of_text: List[str]) -> List[List[float]]:
-        batch_size = 1024
+        batch_size = 10
         batches = [list_of_text[i:i + batch_size] for i in range(0, len(list_of_text), batch_size)]
         
         async def process_batch(batch):

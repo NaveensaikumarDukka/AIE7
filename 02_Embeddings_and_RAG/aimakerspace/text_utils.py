@@ -11,7 +11,7 @@ class TextFileLoader:
     def load(self):
         if os.path.isdir(self.path):
             self.load_directory()
-        elif os.path.isfile(self.path) and self.path.endswith(".txt"):
+        elif os.path.isfile(self.path) and self.path.endswith(".txt") or self.path.endswith(".pdf"):
             self.load_file()
         else:
             raise ValueError(
@@ -25,7 +25,7 @@ class TextFileLoader:
     def load_directory(self):
         for root, _, files in os.walk(self.path):
             for file in files:
-                if file.endswith(".txt"):
+                if file.endswith(".txt") or file.endswith(".pdf"):
                     with open(
                         os.path.join(root, file), "r", encoding=self.encoding
                     ) as f:
