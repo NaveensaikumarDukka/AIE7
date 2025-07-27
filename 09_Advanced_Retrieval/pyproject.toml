@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "arxiv>=2.2.0",
     "jupyter>=1.1.1",
     "langchain-experimental>=0.3.4",
     "langchain>=0.3.19",
@@ -13,5 +14,10 @@ dependencies = [
     "langchain-openai>=0.3.7",
     "qdrant-client>=1.13.2",
     "rank-bm25>=0.2.2",
-    "langchain-qdrant>=0.2.0",  
+    "langchain-qdrant>=0.2.0", 
+    "ragas==0.2.10", 
+    "pymupdf>=1.26.3",
+    "numpy>=2.2.2",
+    "unstructured>=0.14.8",
+    "nltk==3.8.1",
 ]
